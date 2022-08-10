@@ -10,7 +10,8 @@
     "dev": "rollup -c -w",
     "start": "sirv public --single",
     "lint": "eslint 'src/**/*.{html,js,svelte}'",
-    "lint:fix": "eslint --fix 'src/**/*.{html,js,svelte}'"
+    "lint:fix": "eslint --fix 'src/**/*.{html,js,svelte}'", 
+    "deploy": "node ./gh-pages.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -22,6 +23,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-svelte": "^2.3.0",
+    "gh-pages": "^4.0.0",
     "qs": "^6.11.0",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",

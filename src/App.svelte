@@ -1,8 +1,8 @@
 <script>
   import { writable } from 'svelte/store';
   import Router, {
-    location,
-    querystring,
+    location, // /bla/blabla/route
+    querystring, // /bla?Location=Artworld
     push,
     pop,
     link,
@@ -22,7 +22,8 @@
   // Set someVariableStore if found in query param
   $: {
     if (parsedQuery?.i) {
-      $someVariableStore = parseInt(parsedQuery.i, 10);
+      const newValue = parseInt(parsedQuery.i, 10);
+      $someVariableStore = $someVariableStore !== newValue ? newValue : 0;
     }
   }
 
